@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeScribe AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>CodeScribe AI</h1>
+    <p class="subtitle">
+        Automatically generate documentation and architecture diagrams from source code
+    </p>
+
+    <form id="codeForm">
+        <label>Upload Source Code (.py)</label>
+        <textarea id="codeInput" placeholder="Paste your Python code here..." required></textarea>
+
+        <button type="submit">Generate Documentation</button>
+    </form>
+
+    <div id="output">
+        <h2>Generated Documentation</h2>
+        <pre id="docResult">Your documentation will appear here...</pre>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
